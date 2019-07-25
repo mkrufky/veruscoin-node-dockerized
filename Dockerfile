@@ -47,13 +47,6 @@ RUN apt-get -y update && \
 
 # Base of final image (above) already built and cached in the build stage.
 
-RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
-    apt-get -y update && \
-    apt-get -y upgrade && \
-    apt-get -y install nodejs && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
-
 COPY --from=builder /usr/local/bin/verus /usr/bin/
 COPY --from=builder /usr/local/bin/verusd /usr/bin/
 COPY --from=builder /usr/local/bin/docker-entrypoint.sh /usr/bin/entrypoint
