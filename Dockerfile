@@ -4,7 +4,7 @@ MAINTAINER Mihail Fedorov <kolo@komodoplatform.com>
 
 RUN apt-get -y update && \
     apt-get -y upgrade && \
-    apt-get -y install libcurl4-openssl-dev g++-multilib curl && \
+    apt-get -y install libcurl4-openssl-dev curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -41,7 +41,7 @@ MAINTAINER Mihail Fedorov <kolo@komodoplatform.com>
 
 RUN apt-get -y update && \
     apt-get -y upgrade && \
-    apt-get -y install libcurl4-openssl-dev g++-multilib curl && \
+    apt-get -y install libcurl4-openssl-dev curl && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
